@@ -8,7 +8,6 @@ export const navLinks = [
   { id: 'publications', label: 'Publications' },
   { id: 'presentations', label: 'Presentations' },
   { id: 'awards', label: 'Awards' },
-  { id: 'contact', label: 'Contact' },
 ];
 
 export const heroContent = {

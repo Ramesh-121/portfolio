@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import About from './components/About';
 import Awards from './components/Awards';
-import Contact from './components/Contact';
 import CoreSkills from './components/CoreSkills';
 import Education from './components/Education';
 import Experience from './components/Experience';
@@ -89,7 +88,6 @@ function App() {
         <Publications items={publications} />
         <Presentations items={presentations} />
         <Awards items={awards} />
-        <Contact content={contact} />
       </main>
       <Footer contact={contact} links={footerLinks} />
       <ScrollToTop />

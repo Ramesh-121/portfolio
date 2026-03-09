@@ -11,6 +11,7 @@ const focusIconMap = {
 
 function Hero({ content }) {
   const resumeUrl = `${import.meta.env.BASE_URL}Ramesh-Pilli-Resume.pdf`;
+  const emailUrl = 'mailto:ramesh.pilli@ndsu.edu';
 
   return (
     <section id="home" className="relative overflow-hidden px-4 pb-12 pt-24 md:px-6 md:pb-16 md:pt-28">
@@ -51,7 +52,7 @@ function Hero({ content }) {
                 View Experience
                 <ArrowRight size={16} />
               </a>
-              <a className="btn-secondary border-white/20 bg-white/10 text-ivory hover:border-white/40 hover:bg-white/[0.15] hover:text-white" href="#contact">
+              <a className="btn-secondary border-white/20 bg-white/10 text-ivory hover:border-white/40 hover:bg-white/[0.15] hover:text-white" href={emailUrl}>
                 Contact Me
                 <Mail size={16} />
               </a>

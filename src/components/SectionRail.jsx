@@ -4,7 +4,6 @@ import {
   BookOpen,
   Briefcase,
   GraduationCap,
-  Mail,
   Microscope,
   Sparkles,
   UserRound,
@@ -20,7 +19,6 @@ const iconMap = {
   publications: BookOpen,
   presentations: Microscope,
   awards: Award,
-  contact: Mail,
 };
 
 function SectionRail({ links, activeSection }) {
