@@ -36,6 +36,18 @@ function App() {
     let frameId = null;
 
     const updateActiveSection = () => {
+      const viewportBottom = window.scrollY + window.innerHeight;
+      const documentBottom = document.documentElement.scrollHeight;
+      const bottomThreshold = 120;
+
+      if (viewportBottom >= documentBottom - bottomThreshold) {
+        const lastSectionId = sectionIds[sectionIds.length - 1];
+        setActiveSection((previous) =>
+          previous === lastSectionId ? previous : lastSectionId,
+        );
+        return;
+      }
+
       const scrollPosition = window.scrollY + 180;
       const currentSection =
         [...sectionIds]
