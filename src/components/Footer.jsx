@@ -1,4 +1,4 @@
-import { Github, GraduationCap, Linkedin } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 
 function Footer({ contact, links }) {
   return (
@@ -34,18 +34,15 @@ function Footer({ contact, links }) {
             <div>
               <div className="text-sm uppercase tracking-[0.18em] text-gold">Profiles</div>
               <div className="mt-4 flex flex-wrap gap-3">
-                <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-ivory/[0.78]">
-                  <Linkedin className="mr-2 inline-block" size={14} />
-                  LinkedIn
-                </span>
-                <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-ivory/[0.78]">
+                <a
+                  className="inline-flex items-center rounded-full border border-white/10 px-4 py-2 text-sm text-ivory/[0.78] hover:border-gold/30 hover:text-white"
+                  href="https://scholar.google.com/citations?user=SaLssksAAAAJ&hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <GraduationCap className="mr-2 inline-block" size={14} />
                   Google Scholar
-                </span>
-                <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-ivory/[0.78]">
-                  <Github className="mr-2 inline-block" size={14} />
-                  GitHub
-                </span>
+                </a>
               </div>
             </div>
           </div>
