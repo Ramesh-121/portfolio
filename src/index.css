@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --forest: #0f3b2e;
+  --sage: #1f5a47;
+  --gold: #b89b54;
+  --ivory: #f7f5ef;
+  --charcoal: #212121;
+}
+
+html {
+  scroll-behavior: smooth;
+  zoom: 0.8;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(184, 155, 84, 0.12), transparent 36%),
+    linear-gradient(180deg, #fbfaf6 0%, #f7f5ef 42%, #f3f0e7 100%);
+}
+
+::selection {
+  background: rgba(184, 155, 84, 0.25);
+  color: var(--forest);
+}
+
+@layer base {
+  body {
+    @apply font-body text-base text-charcoal antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-charcoal;
+  }
+
+  a {
+    @apply transition-all duration-300;
+  }
+}
+
+@layer components {
+  .section-frame {
+    @apply mx-auto max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+
+  .eyebrow {
+    @apply mb-4 inline-flex items-center rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-forest;
+  }
+
+  .section-title {
+    @apply text-3xl leading-tight md:text-4xl lg:text-5xl;
+  }
+
+  .section-copy {
+    @apply max-w-prose text-base leading-7 md:text-lg md:leading-8 text-charcoal/[0.72];
+  }
+
+  .card-surface {
+    @apply rounded-3xl border border-white/60 bg-white/[0.85] shadow-soft backdrop-blur-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-forest px-4 py-2.5 text-sm font-semibold text-ivory shadow-lg shadow-forest/[0.15] transition duration-300 hover:-translate-y-0.5 hover:bg-sage;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-forest/[0.15] bg-white/70 px-4 py-2.5 text-sm font-semibold text-forest transition duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:bg-white;
+  }
+
+  .hero-texture {
+    background:
+      radial-gradient(circle at top left, rgba(184, 155, 84, 0.28), transparent 32%),
+      radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 22%),
+      linear-gradient(135deg, #0f3b2e 0%, #123f31 52%, #163327 100%);
+  }
+
+  .soft-divider {
+    @apply border-t border-forest/10;
+  }
+
+  .tag-pill {
+    @apply rounded-full border border-forest/10 bg-forest/5 px-3 py-1 text-sm font-medium text-forest/80;
+  }
+
+  .input-shell {
+    @apply w-full rounded-2xl border border-forest/10 bg-white/90 px-4 py-3 text-base text-charcoal outline-none transition duration-300 placeholder:text-charcoal/[0.35] focus:border-gold/50 focus:ring-4 focus:ring-gold/10;
+  }
+}
