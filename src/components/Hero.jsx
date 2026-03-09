@@ -10,6 +10,8 @@ const focusIconMap = {
 };
 
 function Hero({ content }) {
+  const resumeUrl = `${import.meta.env.BASE_URL}Ramesh-Pilli-Resume.pdf`;
+
   return (
     <section id="home" className="relative overflow-hidden px-4 pb-12 pt-24 md:px-6 md:pb-16 md:pt-28">
       <div className="hero-texture absolute inset-0" />
@@ -53,7 +55,7 @@ function Hero({ content }) {
                 Contact Me
                 <Mail size={16} />
               </a>
-              <a className="btn-secondary border-white/20 bg-white/10 text-ivory hover:border-white/40 hover:bg-white/[0.15] hover:text-white" href="/Ramesh-Pilli-Resume.pdf" download>
+              <a className="btn-secondary border-white/20 bg-white/10 text-ivory hover:border-white/40 hover:bg-white/[0.15] hover:text-white" href={resumeUrl} download>
                 Download Resume
                 <Download size={16} />
               </a>

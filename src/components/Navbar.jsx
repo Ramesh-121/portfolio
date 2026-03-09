@@ -4,6 +4,7 @@ import { Download, Menu, X } from 'lucide-react';
 function Navbar({ links, activeSection }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const resumeUrl = `${import.meta.env.BASE_URL}Ramesh-Pilli-Resume.pdf`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +52,7 @@ function Navbar({ links, activeSection }) {
             >
               Home
             </a>
-            <a className="btn-secondary" href="/Ramesh-Pilli-Resume.pdf" download>
+            <a className="btn-secondary" href={resumeUrl} download>
               <Download size={16} />
               Download Resume
             </a>
@@ -88,7 +89,7 @@ function Navbar({ links, activeSection }) {
               })}
               <a
                 className="btn-secondary mt-2"
-                href="/Ramesh-Pilli-Resume.pdf"
+                href={resumeUrl}
                 download
                 onClick={() => setIsOpen(false)}
               >
